@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Blank </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Calculs</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input type="number" [(ngModel)]="op1" />
+        <ion-input type="number" [(ngModel)]="op2" />
+        <ion-button ng (click)="addition()"> + </ion-button>
+        <br />
+        <ion-label>{{rslt}}</ion-label><br />
+        <br />
+
+        <ion-button routerLink="/meteo-widget">Go to weather 1</ion-button
+        ><br />
+        <br />
+        <input type="text" name="city" placeholder="Enter a city name" />
+        <br />
+        <br />
+        <ion-button (click)="goToMw()">Go to weather 2</ion-button><br />
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>meteoWidget</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">meteoWidget</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div>
+    <ion-back-button defaultHref="/home" class="small-back-button"
+      >Back!!!</ion-back-button
+    >
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Weather</ion-card-title>
+        <ion-card-subtitle>{{pays}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <img src="https://flagsapi.com/{{pays}}/flat/64.png" />
+
+          <ion-item>
+            <ion-label>City: {{city}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Temperature: {{temp}} °C</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>pressure: {{pres}} hPa</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Humidity: {{hum}} %</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
